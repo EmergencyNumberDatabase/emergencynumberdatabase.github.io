@@ -6,12 +6,11 @@ html {
     margin: 0;
     border: 0;
     overflow: hidden;
-    background: rgb(85,75,0);
-    background: -moz-linear-gradient(90deg, rgba(85,75,0,1) 0%, rgba(6,255,0,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(85,75,0,1) 0%, rgba(6,255,0,1) 100%);
-    background: linear-gradient(90deg, rgba(85,75,0,1) 0%, rgba(6,255,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#554b00",endColorstr="#06ff00",GradientType=1);
-    text-align: center;
+    background: rgb(190,204,255);
+    background: -moz-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
+    background: linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#beccff",endColorstr="#4369ff",GradientType=1);
 }
 
 body {
@@ -44,4 +43,31 @@ body {
     margin-left: 1vw;
     padding-top: 10vh;
     vertical-align: middle;
+}
+
+.callButton {
+    height: 10vh;
+    border-radius: 50%;
+    color: white;
+    background: rgb(190,204,255);
+    width: 10vh;
+    background: -moz-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
+    background: linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#beccff",endColorstr="#4369ff",GradientType=1);
+    border: 0;
+}
+
+.material-icons.callLarge {
+    font-size: 4vh;
+    vertical-align: middle;
+}
+
+.numberInfo {
+    color: white;
+    background-color: gray;
+    font-size: 2vh;
+    width: 30vh;
+    text-align: center;
+    border-radius: 10vh;
 }
