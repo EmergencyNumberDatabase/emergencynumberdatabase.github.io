@@ -114,10 +114,11 @@ button:hover {
     display: inline;
     vertical-align: middle;
     margin-left: 1vw;
-    background: -moz-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
-    background: linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#beccff",endColorstr="#4369ff",GradientType=1);
+    background: rgb(103,134,255);
+    background: -moz-linear-gradient(90deg, rgba(103,134,255,1) 0%, rgba(67,105,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(103,134,255,1) 0%, rgba(67,105,255,1) 100%);
+    background: linear-gradient(90deg, rgba(103,134,255,1) 0%, rgba(67,105,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6786ff",endColorstr="#4369ff",GradientType=1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
