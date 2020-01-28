@@ -47,11 +47,11 @@ body {
 }
 
 .callButton {
-    height: 10vh;
+    height: 7vh;
     border-radius: 50%;
     color: white;
     background: rgb(190,204,255);
-    width: 10vh;
+    width: 7vh;
     background: -moz-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
     background: linear-gradient(90deg, rgba(190,204,255,1) 0%, rgba(67,105,255,1) 100%);
@@ -84,9 +84,9 @@ button:hover {
     text-align: center;
     vertical-align: center;
     display: inline;
-    position: relative;
     top: 3vh;
     margin-right: 1vw;
+    margin-top: 3.3vh;
 }
 
 .topHeader {
@@ -97,16 +97,6 @@ button:hover {
     position: absolute;
     margin: -3.25vh 0 0 0;
     margin-left: 15vw;
-}
-
-.topName {
-    font-size: 4vh;
-    font-weight: bold;
-    color: white;
-    display: inline;
-    margin: auto;
-    vertical-align: middle;
-    line-height: 6.5vh;
 }
 
 .phoneNumber {
@@ -125,6 +115,7 @@ button:hover {
     -moz-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 .phoneNumber::selection {
@@ -135,8 +126,12 @@ button:hover {
   width: 10px;
 }
 
+::-webkit-scrollbar-track {
+    background: #4369ff;
+}
+
 ::-webkit-scrollbar-thumb {
-    background-color: blue;
+    background-color: #beccff;
     border-radius: 5px;
 }
 
