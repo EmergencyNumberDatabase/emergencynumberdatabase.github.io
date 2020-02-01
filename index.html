@@ -32,38 +32,68 @@
         <div class="loadDiv">
             <img src="src/animation/loading.svg" class="loadingAnimation" alt="Loading Animation">
         </div>
+        <div class="countryChoice">
+            <h1 class="regionTitle">Choose a Region</h1>
+            <div class="regionSelector">
+                <button class="region" onclick="select('#GBbutton');" id="GBbutton" value="GB">United Kingdom</button>
+                <button class="region" onclick="select('#USbutton');" id="USbutton" value="US">United States</button>
+            </div>
+        </div>
         <div class="topHeader">
             <a href="/"><img src="src/icon/logo/1500x1500.png" alt="Emergency Number Database Logo" class="topLogo"></a>
         </div>
         <div class="central" id="central">
             <i class="material-icons location">my_location</i><small id="currentCountry">United Kingdom</small>
+            <br><br>
+            <button class="changeCountry" onclick="showRegionChoice();">Change Region</button>
             <br><br><br>
-            <div class="number1">
-                <p class="numberInfo" id="phoneText1">Police, Fire, Ambulance</p>
+            <div class="number1" style="display: none;">
+                <p class="numberInfo" id="phoneText1"></p>
                 <br><br>
-                <button class="callButton" id="phoneButton1" onclick="window.open('tel:999');"><i class="material-icons callLarge">phone</i></button>
-                <p class="phoneNumber" id="phoneNumber1">999</p>
+                <button class="callButton" id="phoneButton1" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber1"></p>
                 <br><br><br><br>
             </div>
-            <div class="number2">
-                <p class="numberInfo" id="phoneText2">Another Number</p>
+            <div class="number2" style="display: none;">
+                <p class="numberInfo" id="phoneText2"></p>
                 <br><br>
-                <button class="callButton" id="phoneButton2" onclick="window.open('tel:number');"><i class="material-icons callLarge">phone</i></button>
-                <p class="phoneNumber" id="phoneNumber2">01234 567890</p>
+                <button class="callButton" id="phoneButton2" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber2"></p>
                 <br><br><br><br>
             </div>
             <div class="number3" style="display: none;">
-                <p class="numberInfo" id="phoneText3">Another Number</p>
+                <p class="numberInfo" id="phoneText3"></p>
                 <br><br>
-                <button class="callButton" id="phoneButton3" onclick="window.open('tel:number');"><i class="material-icons callLarge">phone</i></button>
-                <p class="phoneNumber" id="phoneNumber3">01234 567890</p>
+                <button class="callButton" id="phoneButton3" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber3"></p>
                 <br><br><br><br>
             </div>
             <div class="number4" style="display: none;">
-                <p class="numberInfo" id="phoneText4">Another Number</p>
+                <p class="numberInfo" id="phoneText4"></p>
                 <br><br>
-                <button class="callButton" id="phoneButton4" onclick="window.open('tel:number');"><i class="material-icons callLarge">phone</i></button>
-                <p class="phoneNumber" id="phoneNumber4">01234 567890</p>
+                <button class="callButton" id="phoneButton4" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber4"></p>
+                <br><br><br><br>
+            </div>
+            <div class="number5" style="display: none;">
+                <p class="numberInfo" id="phoneText5"></p>
+                <br><br>
+                <button class="callButton" id="phoneButton5" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber5"></p>
+                <br><br><br><br>
+            </div>
+            <div class="number6" style="display: none;">
+                <p class="numberInfo" id="phoneText6"></p>
+                <br><br>
+                <button class="callButton" id="phoneButton6" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber6"></p>
+                <br><br><br><br>
+            </div>
+            <div class="number7" style="display: none;">
+                <p class="numberInfo" id="phoneText7"></p>
+                <br><br>
+                <button class="callButton" id="phoneButton7" onclick=""><i class="material-icons callLarge">phone</i></button>
+                <p class="phoneNumber" id="phoneNumber7"></p>
                 <br><br><br><br>
             </div>
         </div>
