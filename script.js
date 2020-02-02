@@ -246,6 +246,30 @@ var isoCountries = {
     'ZW' : 'Zimbabwe'
 };
 
+var CANumbers = {
+    'title1' : 'Police, Fire, Ambulance',
+    'number1' : '911',
+    'title2' : 'Non-Emergency Police or City Services (Certain Areas)',
+    'number2' : '311'
+};
+
+var CNNumbers = {
+    'title1' : 'Police',
+    'number1' : '110',
+    'title2' : 'Ambulance',
+    'number2' : '120',
+    'title3' : 'Fire',
+    'number3' : '119',
+    'title4' : 'Road Police',
+    'number4' : '122',
+    'title5' : 'Marine SOS',
+    'number5' : '12395',
+    'title6' : 'Marine Police',
+    'number6' : '95110',
+    'title7' : 'Forest Fire (Certain Areas)',
+    'number7' : '12119'
+};
+
 var GBNumbers = {
     'title1' : 'Police, Fire, Ambulance',
     'number1' : '999',
@@ -257,9 +281,60 @@ var GBNumbers = {
     'number4' : '111'
 };
 
+var HKNumbers = {
+    'title1' : 'Police, Fire, Ambulance',
+    'number1' : '999',
+    'title2' : 'Phone Fraud',
+    'number2' : '18222'
+};
+
+var INNumbers = {
+    'title1' : 'Police, Fire, Ambulance',
+    'number1' : '112',
+    'title2' : 'Gas Leakage',
+    'number2' : '1906',
+    'title3' : 'Tourist Helpline',
+    'number3' : '1363',
+    'title4' : 'Child Helpline',
+    'number4' : '1098',
+    'title5' : 'Blood Needs',
+    'number5' : '1098',
+    'title6' : 'Women Helpline',
+    'number6' : '181'
+};
+
+var IDNumbers = {
+    'title1' : 'Police, Fire, Ambulance',
+    'number1' : '112',
+    'title2' : 'Natural Disasters',
+    'number2' : '129'
+};
+
+var KHNumbers = {
+    'title1' : 'Police',
+    'number1' : '117',
+    'title2' : 'Ambulance',
+    'number2' : '119',
+    'title3' : 'Fire',
+    'number3' : '118',
+    'title4' : 'Child Helpline',
+    'number4' : '1280'
+};
+
+var MXNumbers = {
+    'title1' : 'Police, Fire, Ambulance',
+    'number1' : '911',
+    'title2' : 'Anonymous Complaint',
+    'number2' : '089'
+};
+
 var USNumbers = {
     'title1' : 'Police, Fire, Ambulance',
-    'number1' : '911'
+    'number1' : '911',
+    'title2' : 'Non-Emergency Police or City Services (Certain Areas)',
+    'number2' : '311',
+    'title3' : 'Highway Patrol (Certain Areas)',
+    'number3' : '#77'
 };
 
 function getCountryName(countryCode) {
@@ -278,10 +353,24 @@ function pageLoad() {
     if (window.location.search.includes('?region=')) {
         var regionCode = getURLParameter("region");
         var fullRegion = getCountryName(regionCode);
-        if (regionCode == 'GB') {
+        if (regionCode == 'CA') {
+            loadNumbers(CANumbers, 2);
+        } else if (regionCode == 'CN') {
+            loadNumbers(CNNumbers, 7);
+        } else if (regionCode == 'GB') {
             loadNumbers(GBNumbers, 4);
+        } else if (regionCode == 'HK') {
+            loadNumbers(HKNumbers, 2);
+        } else if (regionCode == 'IN') {
+            loadNumbers(INNumbers, 6);
+        } else if (regionCode == 'ID') {
+            loadNumbers(IDNumbers, 2);
+        } else if (regionCode == 'KH') {
+            loadNumbers(KHNumbers, 4);
+        } else if (regionCode == 'MX') {
+            loadNumbers(MXNumbers, 2);
         } else if (regionCode == 'US') {
-            loadNumbers(USNumbers, 1);
+            loadNumbers(USNumbers, 3);
         }
 
         // Set the country name
