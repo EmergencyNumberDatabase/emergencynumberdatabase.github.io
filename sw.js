@@ -1,5 +1,5 @@
 const version = "1.0.1";
-const cacheName = `endb`;
+const cacheName = `emndb`;
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
@@ -14,6 +14,7 @@ self.addEventListener('install', e => {
         `/favicon.ico`,
         `/html_code.html`,
         `/src/animation/loading.svg`,
+        `/termsandconditions.md`,
         `/src/icon/logo/1500x1500.png`
       ])
           .then(() => self.skipWaiting());

@@ -381,6 +381,70 @@ function pageLoad() {
         $(".countryChoice").show();
     }
     fadeOutLoad();
+    $(".termsandconditions").removeAttr('style');
+    hideTerms();
+    $("*[import]").each(function() {
+        if (!window.location.href.startsWith("file:///")) {
+            var thisPassOn = this;
+
+            $.ajax({
+                url: $(this).attr("import"),
+                error: function() {
+                    $(thisPassOn).html("Could not load associated information.");
+                }
+            }).done(function(data) {
+                $(thisPassOn).html(data);
+            });
+        } else {
+            $(this).html("<em>Content will go here at run-time: " + $(this).attr("import") + "</em>");
+        }
+    });
+
+    $("*[markdown]").each(function() {
+        if (!window.location.href.startsWith("file:///")) {
+            var thisPassOn = this;
+
+            $.ajax({
+                url: $(this).attr("markdown"),
+                error: function() {
+                    $(thisPassOn).html("Could not load associated information.");
+                }
+            }).done(function(data) {
+                $(thisPassOn).html(new showdown.Converter().makeHtml(data));
+            });
+        } else {
+            $(this).html("<em>Content will go here at run-time: " + $(this).attr("markdown") + "</em>");
+        }
+    });
+
+    $("body").on("mousedown", "*", function(event) {
+        if (($(this).is(":focus") || $(this).is(event.target)) && $(this).css("outline-style") == "none") {
+            $(this).css("outline", "none").on("blur", function() {
+                $(this).off("blur").css("outline", "");
+            });
+        }
+    });
+
+    setInterval(function() {
+        $("*[markdownrf]").each(function() {
+            if (!window.location.href.startsWith("file:///")) {
+                var thisPassOn = this;
+
+                $.ajax({
+                    url: $(this).attr("markdownrf"),
+                    error: function() {
+                        $(thisPassOn).html("Could not load associated information.");
+                    }
+                }).done(function(data) {
+                    if ($(thisPassOn).html() != new showdown.Converter().makeHtml(data)) {
+                        $(thisPassOn).html(new showdown.Converter().makeHtml(data));
+                    }
+                });
+            } else {
+                $(this).html("<em>Content will go here at run-time: " + $(this).attr("markdownrf") + "</em>");
+            }
+        });
+    }, 1000);
 }
 
 function loadNumbers(arrayName, amountOfNumbers) {
@@ -803,3 +867,25 @@ function select(idOfItem) {
     localStorage.itemSelectedPrevious = idOfItem;
     submitData();
 }
+
+function hideTerms() {
+    $(".termsandconditions").hide();
+}
+
+function showTerms() {
+    $(".termsandconditions").attr("style", "z-index: 1111;");
+    $(".termsandconditions").fadeIn();
+}
+
+function fadeOutTerms() {
+    $(".termsandconditions").removeAttr("style");
+    $(".termsandconditions").fadeOut();
+}
+
+setInterval(function(){ 
+    if ($(".loadDiv").is(":visible") || $(".termsandconditions").is(":visible") || $(".countryChoice").is(":visible")) {
+        $("body").attr("style", "overflow-y: hidden;");
+    } else {
+        $("body").removeAttr("style");
+    }
+}, 100);

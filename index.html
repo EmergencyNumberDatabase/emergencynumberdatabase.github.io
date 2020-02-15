@@ -4,6 +4,7 @@
         <title>Emergency Number Database</title>
         <link rel="stylesheet" href="style.css">
         <script src="lib/jquery-3.4.1.js"></script>
+        <script src="lib/showdown.min.js"></script>
         <script src="script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -32,6 +33,10 @@
         <div class="loadDiv">
             <img src="src/animation/loading.svg" class="loadingAnimation" alt="Loading Animation">
         </div>
+        <div class="termsandconditions" style="display: none;">
+            <button class="closeButton" onclick="fadeOutTerms();"><i class="material-icons close">close</i></button>
+            <div id="article" markdownrf="/termsandconditions.md"></div>
+        </div>
         <div class="countryChoice">
             <h1 class="regionTitle">Choose a Region</h1>
             <div class="regionSelector">
@@ -45,6 +50,7 @@
                 <button class="region" onclick="select('#GBbutton');" id="GBbutton" value="GB">United Kingdom</button>
                 <button class="region" onclick="select('#USbutton');" id="USbutton" value="US">United States</button>
             </div>
+            <small class="agreement">By using Emergency Number Database, you agree to the <a href="javascript:showTerms();">Terms and Conditions</a>.</small>
         </div>
         <div class="topHeader">
             <a href="/"><img src="src/icon/logo/1500x1500.png" alt="Emergency Number Database Logo" class="topLogo"></a>
