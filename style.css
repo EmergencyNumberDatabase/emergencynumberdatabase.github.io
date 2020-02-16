@@ -258,6 +258,16 @@ br::selected {
     left: 0;
 }
 
+.agreementMainPage {
+    color: white;
+    font-size: 1.5vh;
+    bottom: 0;
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+    left: 0;
+}
+
 .closeButton {
     position: absolute;
     top: 1vh;
@@ -281,10 +291,14 @@ br::selected {
 
 #article {
     color: white;
-    margin-top: 7vh;
+    margin-top: 3vh;
     font-size: 1.7vh;
     padding-left: 5vw;
     padding-right: 5vw;
     width: 90vw;
     overflow: scroll;
+}
+
+.termTitle {
+    color: white;
 }

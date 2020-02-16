@@ -383,6 +383,7 @@ function pageLoad() {
     fadeOutLoad();
     $(".termsandconditions").removeAttr('style');
     hideTerms();
+    alignTerms();
     $("*[import]").each(function() {
         if (!window.location.href.startsWith("file:///")) {
             var thisPassOn = this;
@@ -889,3 +890,8 @@ setInterval(function(){
         $("body").removeAttr("style");
     }
 }, 100);
+
+function alignTerms() {
+    var pageHeight = $(document).height();
+    $(".agreementMainPage").css("top", pageHeight - 40);
+}
