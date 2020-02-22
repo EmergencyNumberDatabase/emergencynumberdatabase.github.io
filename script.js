@@ -285,7 +285,9 @@ var HKNumbers = {
     'title1' : 'Police, Fire, Ambulance',
     'number1' : '999',
     'title2' : 'Phone Fraud',
-    'number2' : '18222'
+    'number2' : '18222',
+    'title3' : 'Deaf fax/SMS',
+    'number3' : '992'
 };
 
 var INNumbers = {
@@ -328,6 +330,13 @@ var MXNumbers = {
     'number2' : '089'
 };
 
+var PKNumbers = {
+    'title1' : 'Police, Fire, Ambulance',
+    'number1' : '15',
+    'dataSource' : 'https://travel.state.gov/content/dam/students-abroad/pdfs/911_ABROAD.pdf',
+    'dataSourceText' : '911 Numbers Abroad Document (US Government)'
+};
+
 var USNumbers = {
     'title1' : 'Police, Fire, Ambulance',
     'number1' : '911',
@@ -360,7 +369,7 @@ function pageLoad() {
         } else if (regionCode == 'GB') {
             loadNumbers(GBNumbers, 4);
         } else if (regionCode == 'HK') {
-            loadNumbers(HKNumbers, 2);
+            loadNumbers(HKNumbers, 3);
         } else if (regionCode == 'IN') {
             loadNumbers(INNumbers, 6);
         } else if (regionCode == 'ID') {
@@ -369,6 +378,8 @@ function pageLoad() {
             loadNumbers(KHNumbers, 4);
         } else if (regionCode == 'MX') {
             loadNumbers(MXNumbers, 2);
+        } else if (regionCode == 'PK') {
+            loadNumbers(PKNumbers, 1);
         } else if (regionCode == 'US') {
             loadNumbers(USNumbers, 3);
         }

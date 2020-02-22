@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="lib/jquery-3.4.1.js"></script>
         <script src="lib/showdown.min.js"></script>
+        <script data-ad-client="ca-pub-5633847493639778" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script src="script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -49,6 +50,7 @@
                 <button class="region" onclick="select('#INbutton');" id="INbutton" value="IN">India</button>
                 <button class="region" onclick="select('#IDbutton');" id="IDbutton" value="ID">Indonesia</button>
                 <button class="region" onclick="select('#MXbutton');" id="MXbutton" value="MX">Mexico</button>
+                <button class="region" onclick="select('#PKbutton');" id="PKbutton" value="PK">Pakistan</button>
                 <button class="region" onclick="select('#GBbutton');" id="GBbutton" value="GB">United Kingdom</button>
                 <button class="region" onclick="select('#USbutton');" id="USbutton" value="US">United States</button>
             </div>
@@ -61,6 +63,8 @@
             <i class="material-icons location">my_location</i><small id="currentCountry">United Kingdom</small>
             <br><br>
             <button class="changeCountry" onclick="showRegionChoice();">Change Region</button>
+            <br>
+            <p class="dataSourceContainer">The data from this region is from <a id="dataSource" target="_blank">loading</a></p>
             <br><br><br>
             <div class="number1" style="display: none;">
                 <p class="numberInfo" id="phoneText1"></p>
